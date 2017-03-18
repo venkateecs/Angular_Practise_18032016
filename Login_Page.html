@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="My_Hrms" ng-controller="My_Ctrl">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="Styles/Style1.css" rel="stylesheet" />
+    <script src="bower_components/jquery/dist/jquery.js">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="http://ui-grid.info/release/ui-grid.js"></script>
+    <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+    <script src="app/Login/login.js"></script>
+    <script src="app/Login/login_ctrl.js"></script>
+    <script src="app/Login/login_svc.js"></script>
+    <script src="app/Utils_Directives/Directives.js"></script>
+    <script src="app/All_Employees/View_All_Employees.js"></script>
+    <script src="app/view_personal/view_personal_ctrl.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    
+    
+<form name="form1">
+    <div ng-show="login_form">
+    <!--<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>-->
+
+    <!--<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">-->    
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h1>Login to Your Account</h1>
+                <br>
+                <form>
+                    <input type="text" name="user" placeholder="Username" ng-model="login_credentials.username" ng-required="true">
+                    <span style="color:red" ng-show="form1.user.$dirty && form1.user.$invalid">
+                            <span style="color:red" ng-show="form1.user.$error.required">
+                                Please Enter Name
+                            </span>
+                    </span>
+                    <input type="password" name="pass" placeholder="Password" ng-model="login_credentials.password" ng-required="true">
+                    <span style="color:red" ng-show="form1.pass.$dirty && form1.pass.$invalid">
+                        <span style="color:red" ng-show="form1.pass.$error.required">
+                            Please Enter Password
+                        </span>
+                    </span>  
+                    <input type="submit" name="login" class="login loginmodal-submit" value="Login" ng-click="login()" ng-disabled ="form1.$invalid">
+                </form>
+
+                <div class="login-help">
+                    <a href="#">Register</a> - <a href="#">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+</div>
+    <div ui-view></div>
+</form>
+</body>
+</html>

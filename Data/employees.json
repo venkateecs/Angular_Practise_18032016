@@ -1,0 +1,36 @@
+{
+    "employees":[
+        {"name":"VenkataRamana",
+         "email":"venkateecs@gmail.com",
+         "gender":"M",
+         "country":"IN",
+         "state_code":"TE",
+         "city_code":"H",
+         "empl_id":"1"
+        },
+        {"name":"Kumaran",
+         "email":"Kumaran@gmail.com",
+         "gender":"M",
+         "country":"IN",
+         "state_code":"TN",
+         "city_code":"C",
+         "empl_id":"2"
+        },
+        {"name":"Chandra Sekhar Hegde",
+         "email":"chandra@gmail.com",
+         "gender":"M",
+         "country":"IN",
+         "state_code":"KA",
+         "city_code":"B",
+         "empl_id":"3"
+        },
+        {"name":"Venkatesh",
+         "email":"Venkatesh@gmail.com",
+         "gender":"M",
+         "country":"IN",
+         "state_code":"TE",
+         "city_code":"H",
+         "empl_id":"4"
+        }
+    ]
+}

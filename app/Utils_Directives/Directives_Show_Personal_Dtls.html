@@ -1,0 +1,24 @@
+﻿<h1>
+    Hello Through Directive
+</h1>
+
+<span ng-model="details.name">
+
+</span>
+ <table>
+        <tr>
+            <th>Name:-</th>
+            <td>
+                {{details.name | uppercase}}                
+            </td>
+        </tr>
+        <tr>
+            <th>Email Id:-</th>
+            <td>{{details.email | uppercase }}</td>
+        </tr>
+        <tr>
+            <th>Country:-</th>
+            <td>{{details.country | uppercase}}</td>
+        </tr>
+     
+    </table>

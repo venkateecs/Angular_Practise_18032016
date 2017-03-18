@@ -1,0 +1,26 @@
+{
+"cities":
+[
+{
+ "name":"Hyderabad",
+ "code":"H",
+ "state_code":"TE",
+"ctycode":"IN"
+},
+{
+ "name":"Chennai",
+ "code":"C",
+ "state_code":"TN",
+"ctycode":"IN"
+},
+
+{
+ "name":"Bengaluru",
+ "code":"B",
+ "state_code":"KA",
+"ctycode":"IN"
+}
+    
+    
+]
+}

@@ -1,0 +1,25 @@
+{
+"users":
+[
+{
+ "username":"venkataramana",
+ "password":"12345",
+"userid":"1"
+},
+{
+  "username":"ganesh",
+ "password":"qwer",
+"userid":"2"
+},
+{
+  "username":"rahul",
+ "password":"12345",
+"userid":"3"
+},
+{
+  "username":"mahesh",
+ "password":"12345",
+"userid":"4"
+}
+]
+}

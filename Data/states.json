@@ -1,0 +1,25 @@
+{
+"states":
+[
+{
+ "name":"Telangana",
+ "code":"TE",
+"ctycode":"IN"
+},
+{
+ "name":"Andhra Pradesh",
+ "code":"AP",
+"ctycode":"IN"
+},
+{
+ "name":"Tamil Nadu",
+ "code":"TN",
+"ctycode":"IN"
+},
+{
+ "name":"Karnataka",
+ "code":"KA",
+"ctycode":"IN"
+}
+]
+}

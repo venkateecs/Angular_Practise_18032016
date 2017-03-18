@@ -1,0 +1,23 @@
+﻿<div align="right">
+     <input type="button" value="Back" ng-click="goback()"/>
+</div>
+
+<h1>
+    Hello Routing {{show_emp_dtls.name}}
+</h1>
+
+
+<table>
+        <tr>
+            <th>Name:-</th>
+            <td>{{show_emp_dtls.name | uppercase}}</td>
+        </tr>
+        <tr>
+            <th>Email Id:-</th>
+            <td>{{show_emp_dtls.email | uppercase }}</td>
+        </tr>
+        <!--<tr>
+            <th>Country:-</th>
+            <td>{{emp_personal_details.country | uppercase}}</td>
+        </tr>-->
+    </table>

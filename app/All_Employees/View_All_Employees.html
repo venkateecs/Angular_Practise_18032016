@@ -1,0 +1,35 @@
+﻿<h1>Hello Welcome to All Employees</h1>
+
+{{parameter_value}}
+
+
+<ul>
+    <li ng-repeat="employee in allEmployees| uppercase" ng-click="check_emp(employee)">
+        <a ui-sref="view_personal({name:employee.name,email:employee.email})">{{employee.name | uppercase}}</a> 
+    </li>
+</ul>
+
+<div ng-show="emp_details_visible" empdetails details="emp_personal_details">
+
+</div>
+<br />
+<!--
+<div ng-show="emp_details_visible">
+
+    <table>
+        <tr>
+            <th>Name:-</th>
+            <td>{{emp_personal_details.name | uppercase}}</td>
+        </tr>
+        <tr>
+            <th>Email Id:-</th>
+            <td>{{emp_personal_details.email | uppercase }}</td>
+        </tr>
+        <tr>
+            <th>Country:-</th>
+            <td>{{emp_personal_details.country | uppercase}}</td>
+        </tr>
+    </table>
+
+</div>
+ -->

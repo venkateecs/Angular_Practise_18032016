@@ -1,0 +1,149 @@
+﻿<!--<div header headertitle="{{hdr_title}}" add="add_personal()">
+</div>-->
+<h1>Welcome to  {{username}}</h1>
+
+<button type="button" class="btn btn-info" ng-click="add_personal()">Add Personal Data</button>
+<button type="button" class="btn btn-info" ng-click="view_personal()">View Personal Data</button>
+<button type="button" class="btn btn-info" ng-click="view_all_emps()">View All Employees</button>
+<br />
+<br />
+<br />
+
+<div ng-show="add_visible">
+
+    <div class="container">
+        <div>
+            <h1>Add Your Pesronal Details</h1>
+        </div>
+        <form name="form1">
+            <div class="form-group">
+                <label for="txt_name">Name</label>
+                <input type="text" class="form-control" ng-required="true" name="txt_name" ng-model="personal_details.name" placeholder="Please Enter Name">
+                <!--<span ng-show="form1.txt_name.$dirty">-->
+                <span ng-show="form1.txt_name.$error.required" style="color: red">Please Select Gender
+                </span>
+                <!--<span ng-show="form1.txt_name.$error.hrcheckno" style="color: red">Please Enter Name Without Number
+                    </span>-->
+                <!--</span>-->
+
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Personal Email</label>
+                <input type="email" class="form-control" name="inputEmail" id="inputEmail" ng-model="personal_details.email" placeholder="Email" ng-required="true">
+                <span ng-show="form1.inputEmail.$dirty">
+                    <span ng-show="form1.inputEmail.$error.required" style="color: red">Please Enter Personal Email
+                    </span>
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="gender" ng-model="personal_details.gender" ng-required="true" value="M">Male</label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="gender" ng-model="personal_details.gender" ng-required="true" value="F">Female</label>
+                </div>
+                <span ng-show="form1.gender.$error.required" style="color: red">Please Select Gender
+                </span>
+
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <div class="dropdown">
+                    <select data-style="btn-success" ng-model="personal_details.country" name="country" ng-required="true" ng-options="country.code as country.name for country in countries" ng-change="cntry_change()">
+                        <option></option>
+                    </select>
+                    <span ng-show="form1.country.$error.required" style="color: red">Please Select Country
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country">State</label>
+                <div class="dropdown">
+                    <select data-style="btn-success" ng-model="personal_details.state" name="state" ng-required="true" ng-options="state.code as state.name for state in states" ng-change="state_change()">
+                        <option></option>
+                    </select>
+                    <span ng-show="form1.state.$error.required" style="color: red">Please Select state
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country">City</label>
+                <div class="dropdown">
+                    <select data-style="btn-success" ng-model="personal_details.city" name="city" ng-required="true" ng-options="city.code as city.name for city in cities">
+                        <option></option>
+                    </select>
+                    <span ng-show="form1.city.$error.required" style="color: red">Please Select City
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" ng-disabled="form1.$invalid" ng-click="personal_save()">Save</button>
+        </form>
+
+    </div>
+</div>
+
+<div ng-show="view_visible">
+    <div class="container">
+        <div>
+            <h1>View Your Pesronal Details</h1>
+        </div>
+        <form name="form1">
+            <div class="form-group">
+                <label for="txt_name">Name</label>
+                <input type="text" disabled="true" class="form-control" hrcheckno="true" hrrequired="true" hrms-required name="txt_name" ng-model="personal_details.name">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Personal Email</label>
+                <input type="email" disabled="true" class="form-control" name="inputEmail" id="Email1" ng-model="personal_details.email" placeholder="Email" ng-required="true">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" disabled="true" name="gender" ng-model="personal_details.gender" ng-required="true" value="M">Male</label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" disabled="true" name="gender" ng-model="personal_details.gender" ng-required="true" value="F">Female</label>
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <div class="dropdown">
+                    <select data-style="btn-success" disabled="true" ng-model="personal_details.country" name="country" ng-required="true" ng-options="country.code as country.name for country in countries" ng-change="cntry_change()">
+                        <option></option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country">State</label>
+                <div class="dropdown">
+                    <select data-style="btn-success" disabled="true" ng-model="personal_details.state" name="state" ng-required="true" ng-options="state.code as state.name for state in states" ng-change="state_change()">
+                        <option></option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country">City</label>
+                <div class="dropdown">
+                    <select data-style="btn-success" disabled="true" ng-model="personal_details.city" name="city" ng-required="true" ng-options="city.code as city.name for city in cities">
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+    <div ui-view></div>

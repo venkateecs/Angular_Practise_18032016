@@ -1,0 +1,8 @@
+{
+    "countries":[
+        {"code":"IN","name":"India"},
+        {"code":"AU","name":"Australia"},
+        {"code":"USA","name":"United States of America"},
+        {"code":"SL","name":"Sri Lanka"}        
+    ]
+}
